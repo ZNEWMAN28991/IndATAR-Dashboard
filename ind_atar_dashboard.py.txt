@@ -1,0 +1,18 @@
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataset
+file_path = "IndATAR_PowerBI_Dataset.csv"  # Update this if needed
+df = pd.read_csv(file_path)
+
+# Streamlit Page Configuration
+st.set_page_config(page_title="Ind ATAR Dashboard", layout="wide")
+
+# Page Title
+st.title("📊 Ind ATAR Analysis Dashboard")
+st.write("Analyze subject performance, ATAR trends, and rankings over time.")
+
+# Sidebar Filters
+st.sidebar.header("🔍 Filter Data")
+selected_year = st.sidebar.selectbox("Select Year:", sorted
